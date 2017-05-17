@@ -1,23 +1,54 @@
 package entidades;
 
+
+import com.google.gson.annotations.SerializedName;
+
 public class Atleta {
 	
+	@SerializedName("nome")
 	private String nome;
-	private String apelido;
-	private String foto;
-	private int atleta_id;
-	private int rodada_id;
-	private int clube_id;
-	private int posicao_id;
-	private int status_id;
-	private int pontos_num;
-	private double preco_num;
-	private double variacao_num;
-	private double media_num;
-	private int jogos_num;
-	private Scout scout;
 	
-	Atleta(){
+	@SerializedName("apelido")
+	private String apelido;
+	
+	@SerializedName("foto")
+	private String foto;
+	
+	@SerializedName("atleta_id")
+	private int atleta_id;
+	
+	@SerializedName("rodada_id")
+	private int rodada_id;
+	
+	@SerializedName("clube_id")
+	private int clube_id;
+	
+	@SerializedName("posicao_id")
+	private int posicao_id;
+	
+	@SerializedName("status_id")
+	private int status_id;
+	
+	@SerializedName("pontos_num")
+	private double pontos_num;
+	
+	@SerializedName("preco_num")
+	private double preco_num;
+	
+	@SerializedName("variacao_num")
+	private double variacao_num;
+	
+	@SerializedName("media_num")
+	private double media_num;
+	
+	@SerializedName("jogos_num")
+	private int jogos_num;
+	
+	
+	@SerializedName("scout")
+	private Scout scout[];
+	
+	public Atleta(){
 		
 	}
 	
@@ -69,10 +100,10 @@ public class Atleta {
 	public void setStatus_id(int status_id) {
 		this.status_id = status_id;
 	}
-	public int getPontos_num() {
+	public double getPontos_num() {
 		return pontos_num;
 	}
-	public void setPontos_num(int pontos_num) {
+	public void setPontos_num(double pontos_num) {
 		this.pontos_num = pontos_num;
 	}
 	public double getPreco_num() {
@@ -99,12 +130,19 @@ public class Atleta {
 	public void setJogos_num(int jogos_num) {
 		this.jogos_num = jogos_num;
 	}
-	public Scout getScout() {
+
+	/*
+	public Scout[] getScout() {
 		return scout;
 	}
-	public void setScout(Scout scout) {
+
+	public void setScout(Scout[] scout) {
 		this.scout = scout;
-	}
+	}*/
+
+	
+
+	
 	
 	
 }

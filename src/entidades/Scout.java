@@ -1,22 +1,33 @@
 package entidades;
 
+import com.google.gson.annotations.JsonAdapter;
+
+@JsonAdapter(ScoutTypeAdapter.class)
 public class Scout {
 	
-	private String valores;
+	private String acao;
+	private int valor;
 	
 	Scout(){
 		
 	}
 
-	public String getValores() {
-		return valores;
+	public String getAcao() {
+		return acao;
 	}
 
-	public void setValores(String valores) {
-		this.valores = valores;
+	public void setAcao(String acao) {
+		this.acao = acao;
 	}
-	
-	
+
+	public int getValor() {
+		return valor;
+	}
+
+	public void setValor(int valor) {
+		this.valor = valor;
+	}
+			
 	
 	
 }
